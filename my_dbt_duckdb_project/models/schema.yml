@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_sales
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: country
+        tests:
+          - not_null
+      - name: amount
+        tests:
+          - not_null
+
+  - name: sales_by_country
+    columns:
+      - name: country
+        tests:
+          - not_null
+      - name: total_sales
+        tests:
+          - not_null
+
